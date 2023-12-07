@@ -1,0 +1,822 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   
+</head>
+<body>
+    
+
+    <form method="post" action="{{ url_for('Exampotal') }}">
+    <div class="tab-pane fade" role="tabpanel" id="step3">
+        <div class="step3">
+            <h3 align="center" style="color:#5bc0de;"> Examination Portal</h3> 
+
+                <br>
+
+             
+            
+            
+                <br>
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject1" class="form-control" name="subject1">
+                        <option value="Mathematics" selected>Mathematics</option>
+                    </select>
+                    <!--<br/>-->
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject2" class="form-control" name="subject2">
+                        <option value="English" selected="selected">English</option>
+                    </select>
+                    <!--<br/>-->
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">* Mathematics Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade1" class="form-control" name="grade1">
+                        <option value="" selected>--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option selected value="C5"> C5 </option>
+                                                                <option value="C6"> C6 </option>
+                                                            <option value="D7"> D7 </option>
+                                                            <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                    <!--<br />-->
+                </div>
+
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">* English Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade2" class="form-control" name="grade2">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option value="C5"> C5 </option>
+                                                            <option selected value="C6"> C6 </option>
+                                                                <option value="D7"> D7 </option>
+                                                            <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                    <!--<br />-->
+                </div>
+                                    <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject3" class="form-control chosen" name="subject3" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics"> Economics </option>
+                                                                    <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government"> Government </option>
+                                                                    <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English"> Literature-in-English </option>
+                                                                    <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education" selected> Civic Education </option>
+                                                                        <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies"> Islamic Studies </option>
+                                                                    <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa"> Hausa </option>
+                                                                    <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing"> Marketing </option>
+                                                    </select>
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject4" class="form-control chosen" name="subject4" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics"> Economics </option>
+                                                                    <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government"> Government </option>
+                                                                    <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English"> Literature-in-English </option>
+                                                                    <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education"> Civic Education </option>
+                                                                    <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies" selected> Islamic Studies </option>
+                                                                        <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa"> Hausa </option>
+                                                                    <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing"> Marketing </option>
+                                                    </select>
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">Subject 3 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade3" class="form-control" name="grade3">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option value="C5"> C5 </option>
+                                                            <option value="C6"> C6 </option>
+                                                            <option selected value="D7"> D7 </option>
+                                                                <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                    <!--<br />-->
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">* Subject 4 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade4" class="form-control" name="grade4">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option value="C5"> C5 </option>
+                                                            <option selected value="C6"> C6 </option>
+                                                                <option value="D7"> D7 </option>
+                                                            <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                    <!--<br />-->
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject5" class="form-control chosen" name="subject5" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics"> Economics </option>
+                                                                    <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government" selected> Government </option>
+                                                                        <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English"> Literature-in-English </option>
+                                                                    <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education"> Civic Education </option>
+                                                                    <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies"> Islamic Studies </option>
+                                                                    <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa"> Hausa </option>
+                                                                    <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing"> Marketing </option>
+                                                    </select>
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject6" class="form-control chosen" name="subject6" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics" selected> Economics </option>
+                                                                        <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government"> Government </option>
+                                                                    <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English"> Literature-in-English </option>
+                                                                    <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education"> Civic Education </option>
+                                                                    <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies"> Islamic Studies </option>
+                                                                    <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa"> Hausa </option>
+                                                                    <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing"> Marketing </option>
+                                                    </select>
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">Subject 5 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade5" class="form-control" name="grade5">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option value="C5"> C5 </option>
+                                                            <option value="C6"> C6 </option>
+                                                            <option value="D7"> D7 </option>
+                                                            <option selected value="E8"> E8 </option>
+                                                                <option value="F9"> F9 </option>
+                                                </select>
+                </div>
+
+
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">Subject 6 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade6" class="form-control" name="grade6">
+                        <option value="" selected>--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option selected value="C4"> C4 </option>
+                                                                <option value="C5"> C5 </option>
+                                                            <option value="C6"> C6 </option>
+                                                            <option value="D7"> D7 </option>
+                                                            <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject7" class="form-control chosen" name="subject7" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics"> Economics </option>
+                                                                    <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government"> Government </option>
+                                                                    <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English" selected> Literature-in-English </option>
+                                                                        <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education"> Civic Education </option>
+                                                                    <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies"> Islamic Studies </option>
+                                                                    <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa"> Hausa </option>
+                                                                    <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing"> Marketing </option>
+                                                    </select>
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject8" class="form-control chosen" name="subject8" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics"> Economics </option>
+                                                                    <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government"> Government </option>
+                                                                    <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English"> Literature-in-English </option>
+                                                                    <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education"> Civic Education </option>
+                                                                    <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies"> Islamic Studies </option>
+                                                                    <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa" selected> Hausa </option>
+                                                                        <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing"> Marketing </option>
+                                                    </select>
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">Subject 7 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade7" class="form-control" name="grade7">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option value="C5"> C5 </option>
+                                                            <option value="C6"> C6 </option>
+                                                            <option selected value="D7"> D7 </option>
+                                                                <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                    <!--<br />-->
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">Subject 8 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade8" class="form-control" name="grade8">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option value="C5"> C5 </option>
+                                                            <option value="C6"> C6 </option>
+                                                            <option selected value="D7"> D7 </option>
+                                                                <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                    <!--<br />-->
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject9" class="form-control chosen" name="subject9" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics"> Economics </option>
+                                                                    <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government"> Government </option>
+                                                                    <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English"> Literature-in-English </option>
+                                                                    <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education"> Civic Education </option>
+                                                                    <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies"> Islamic Studies </option>
+                                                                    <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa"> Hausa </option>
+                                                                    <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing" selected> Marketing </option>
+                                                        </select>
+                </div>
+
+                <label class="col-sm-2"></label>
+                <div class="col-sm-4 form-group">
+                    <select id="subject10" class="form-control chosen" name="subject10" style="width: 100%">
+                                                        <option value="">--</option>
+                                                                    <option value="Chemistry"> Chemistry </option>
+                                                                    <option value="Biology"> Biology </option>
+                                                                    <option value="Physics"> Physics </option>
+                                                                    <option value="Agricultural Science"> Agricultural Science </option>
+                                                                    <option value="Further Mathematics"> Further Mathematics </option>
+                                                                    <option value="Economics"> Economics </option>
+                                                                    <option value="Accounting"> Accounting </option>
+                                                                    <option value="History"> History </option>
+                                                                    <option value="Religious Studies"> Religious Studies </option>
+                                                                    <option value="Government"> Government </option>
+                                                                    <option value="Visual Art"> Visual Art </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Geography"> Geography </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Computer Studies"> Computer Studies </option>
+                                                                    <option value="Literature-in-English"> Literature-in-English </option>
+                                                                    <option value="General Metal Work"> General Metal Work </option>
+                                                                    <option value="General Wood Work"> General Wood Work </option>
+                                                                    <option value="Basic Electricity"> Basic Electricity </option>
+                                                                    <option value="Commerce"> Commerce </option>
+                                                                    <option value="Civic Education"> Civic Education </option>
+                                                                    <option value="Building/Engineering Drawing"> Building/Engineering Drawing </option>
+                                                                    <option value="Islamic Studies"> Islamic Studies </option>
+                                                                    <option value="Christian Religious Studies"> Christian Religious Studies </option>
+                                                                    <option value="Animal Husbandry"> Animal Husbandry </option>
+                                                                    <option value="Information Communication Technology (ICT)"> Information Communication Technology (ICT) </option>
+                                                                    <option value="Financial Accounting"> Financial Accounting </option>
+                                                                    <option value="Salesmanship"> Salesmanship </option>
+                                                                    <option value="Office Practice"> Office Practice </option>
+                                                                    <option value="Tourism"> Tourism </option>
+                                                                    <option value="Fine Arts"> Fine Arts </option>
+                                                                    <option value="Technical Drawing"> Technical Drawing </option>
+                                                                    <option value="Type Writing"> Type Writing </option>
+                                                                    <option value="Business/Construction Management"> Business/Construction Management </option>
+                                                                    <option value="French"> French </option>
+                                                                    <option value="Arabic"> Arabic </option>
+                                                                    <option value="Hausa"> Hausa </option>
+                                                                    <option value="Igbo"> Igbo </option>
+                                                                    <option value="Yoruba"> Yoruba </option>
+                                                                    <option value="Store Management"> Store Management </option>
+                                                                    <option value="Store Keeping"> Store Keeping </option>
+                                                                    <option value="Physical Education"> Physical Education </option>
+                                                                    <option value="Music"> Music </option>
+                                                                    <option value="Jewellery"> Jewellery </option>
+                                                                    <option value="Mining"> Mining </option>
+                                                                    <option value="Metal Work"> Metal Work </option>
+                                                                    <option value="Painting and Decorating"> Painting and Decorating </option>
+                                                                    <option value="Integrated Science"> Integrated Science </option>
+                                                                    <option value="Insurance"> Insurance </option>
+                                                                    <option value="Home Management"> Home Management </option>
+                                                                    <option value="Foods and Nutrition"> Foods and Nutrition </option>
+                                                                    <option value="Garment Making"> Garment Making </option>
+                                                                    <option value="Fishery"> Fishery </option>
+                                                                    <option value="Book Keeping"> Book Keeping </option>
+                                                                    <option value="Clothing and Textiles"> Clothing and Textiles </option>
+                                                                    <option value="Ceramics"> Ceramics </option>
+                                                                    <option value="Carpentry"> Carpentry </option>
+                                                                    <option value="Dyeing and Bleaching"> Dyeing and Bleaching </option>
+                                                                    <option value="Marketing"> Marketing </option>
+                                                    </select>
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">Subject 9 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade9" class="form-control" name="grade9">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option value="C4"> C4 </option>
+                                                            <option value="C5"> C5 </option>
+                                                            <option selected value="C6"> C6 </option>
+                                                                <option value="D7"> D7 </option>
+                                                            <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                    <!--<br />-->
+                </div>
+
+                <div class="col-sm-2"></div>
+                <label class="col-sm-2">Subject 10 Grade:</label>
+                <div class="col-sm-2 form-group">
+                    <select id="grade10" class="form-control" name="grade10">
+                        <option value="" selected="selected">--</option>
+                                                            <option value="A1"> A1 </option>
+                                                            <option value="B2"> B2 </option>
+                                                            <option value="B3"> B3 </option>
+                                                            <option selected value="C4"> C4 </option>
+                                                                <option value="C5"> C5 </option>
+                                                            <option value="C6"> C6 </option>
+                                                            <option value="D7"> D7 </option>
+                                                            <option value="E8"> E8 </option>
+                                                            <option value="F9"> F9 </option>
+                                                </select>
+                                             
+                </div>
+
+
+
+            </fieldset>
+            <br><br>
+            <ul class="list-inline col-sm-12 ">
+                <li class="col-md-7 col-sm-6 col-xs-0"></li>
+<li class="col-md-2 col-sm-2 col-xs-12" style="padding-bottom: 1em">
+    <button type="button" title="Go to Personal Information" id="contact_info_btn" align="center" data-toggle="tooltip" data-success-callback="stepOneComplete" onclick="goBack()" class="btn-block btn-info" style="padding:.7em 1.2em;box-shadow: 2px 0 8px 0 #888888;">
+        <span style="font-size: 1.0em; font-weight: bolder"><i class="glyphicon glyphicon-menu-left"></i> Previous</span>
+    </button>
+    <script>
+        function goBack() {
+            // You can use window.history.back() to go back one step in the browser history
+            window.history.back();
+        }
+    </script>
+</li>
+<li class="col-md-3 col-sm-4 col-xs-12" style="padding-bottom: 1em">
+    <button type="submit" title="Save Personal & Contact Information" id="contact_info_btn_save" align="center" data-toggle="tooltip" data-placement="top" onclick="submitToDatabase()" class="btn-block btn-info" style="padding:.7em 1.2em;box-shadow: 2px 0 8px 0 #888888;">
+        <span style="font-size: 1.0em; font-weight: bolder">Submit </span>
+    </button>
+    
+    <script>
+        function submitToDatabase() {
+            
+        }
+    </script>
+    
+    {% if show_message_box %}
+        <script>
+            // You may want to move this alert into your submitToDatabase() function
+            alert("Data submitted successfully!");
+        </script>
+    {% endif %}
+    
+    <!-- Add this to display the success message -->
+    {% if success_message %}
+        <div class="success-message" id="success-message">
+            {{ success_message }}
+        </div>
+        <script>
+            // Automatically remove the success message after 5 seconds
+            setTimeout(function() {
+                var successMessage = document.getElementById('success-message');
+                successMessage.style.display = 'none';
+            }, 1000);  // 5000 milliseconds = 5 seconds
+        </script>
+    {% endif %}
+    
+
+
+    
+</li>
+            </ul>
+            </form>
+            
+           
+</body>
+</html>

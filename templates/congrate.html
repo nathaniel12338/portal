@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations Card</title>
+    <!-- Include necessary CSS and JS files (e.g., Bootstrap) -->
+
+    <!-- Bootstrap CSS (example, you can replace it with your preferred CSS framework) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Your main content here -->
+
+<!-- Congratulations Modal -->
+<div class="modal fade" id="congratulationsModal" tabindex="-1" role="dialog" aria-labelledby="congratulationsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-primary" id="congratulationsModalLabel">
+                    Congratulations! 🎉
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Display the username from the database here -->
+                <p class="text-center text-primary">
+                    Congratulations, <span id="usernamePlaceholder"></span>! 🎉
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS (example, you can replace it with your preferred JS framework) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your script to set the username in the modal and show the modal -->
+<script>
+    // Assume you have a JavaScript variable containing the username
+    var usernameFromDatabase = "JohnDoe";
+
+    // Set the username in the modal
+    document.getElementById('usernamePlaceholder').innerText = usernameFromDatabase;
+
+    // Show the modal on page load
+    $(document).ready(function() {
+        $('#congratulationsModal').modal('show');
+    });
+</script>
+
+</body>
+</html>

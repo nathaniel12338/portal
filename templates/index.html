@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Portal</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <!-- Vendors Style -->
+  <link rel="stylesheet" href="#">
+
+  <style>
+    body {
+      background-image:url('/static/imgs/Florida\ .jpg'); 
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-form {
+      max-width: 500px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .login-form h3 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+    
+
+    .btn-custom {
+      display: inline-block;
+      background-color: #0c5183b1;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 3px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn-custom:hover {
+      background-color: #0c5183b1;
+      
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-15 {
+      margin-top: 15px;
+    }
+
+    .mb-0 {
+      margin-bottom: 0;
+    }
+
+    .text-warning {
+      color: #ffc107;
+    }
+    .error-message {
+            color: red;
+        }
+        .message {
+            color: rgba(0, 123, 255, 0.783);
+        }
+
+    .ms-5 {
+      margin-left: 5px;
+    }
+    .password-toggle-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h3>Login</h3>
+            <form class="form-horizontal form-element" action="{{ url_for('login') }}" method="post">
+                <div class="form-group">
+                
+                    <label for="username" class="form-label">Email</label>
+                    <input type="text" class="form-control rounded-3" id="username" required placeholder="example@gmail.com" name="username" autocomplete="off" autocorrect="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <div style="position: relative;">
+                        <input type="password" class="form-control rounded-3" id="password" required placeholder="Password" name="password">
+                        <i class="password-toggle-icon" id="password-toggle-icon" onclick="togglePasswordVisibility()">&#x1f441;</i>
+                    </div>
+                    <div id="password-strength" class="mb-0"></div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn-custom">LOG IN</button>
+                </div>
+                {% if error_message %}
+                <div class="error-message" id="error-message">
+                    {{ error_message }}
+                </div>
+                <script>
+                    // Automatically remove the error message after 5 seconds
+                    setTimeout(function() {
+                        var errorMessage = document.getElementById('error-message');
+                        errorMessage.style.display = 'none';
+                        document.getElementById('username').value = '';
+                        document.getElementById('password').value = '';
+                    }, 1000);
+                </script>
+            {% endif %}
+            
+            {% if success_message %}
+                <div class="message" id="message">
+                    {{ success_message }}
+                </div>
+                <script>
+                    // Automatically remove the success message after 5 seconds
+                    setTimeout(function() {
+                        var successMessage = document.getElementById('message');
+                        successMessage.style.display = 'none';
+                    }, 1000);
+                </script>
+            {% endif %}
+            
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openAccountPage() {
+            window.location.href = "/Teacherpotel";
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var passwordToggleIcon = document.getElementById("password-toggle-icon");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggleIcon.innerHTML = "&#x1f576;";
+            } else {
+                passwordInput.type = "password";
+                passwordToggleIcon.innerHTML = "&#x1f441;";
+            }
+        }
+    </script>
+</body>
+</html>
